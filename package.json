@@ -6,7 +6,11 @@
   "scripts": {
     "clean": "hardhat clean",
     "build": "hardhat compile",
-    "transfer": "npx hardhat run --network luksoTestnet scripts/transfer.ts"
+    "transfer": "npx hardhat run --network luksoTestnet scripts/transfer.ts",
+    "transferLyxRelayCall": "npx hardhat run --network luksoTestnet scripts/transferLyxRelayCall.ts",
+    "transfer-contract": "npx hardhat run --network luksoTestnet scripts/transferLSP7execute.ts",
+    "deploy-factory": "npx hardhat run --network luksoTestnet scripts/deployUsingFactory.ts",
+    "fund": "npx hardhat run --network luksoTestnet scripts/fundChangeName.ts"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
@@ -32,8 +36,10 @@
   },
   "dependencies": {
     "@erc725/smart-contracts": "^7.0.0",
+    "@lukso/eip191-signer.js": "^0.2.2",
     "@lukso/lsp-factory.js": "^3.2.1",
-    "@lukso/lsp-smart-contracts": "^0.14.0"
+    "@lukso/lsp-smart-contracts": "^0.14.0",
+    "isomorphic-fetch": "^3.0.0"
   },
   "author": "",
   "license": "ISC"
